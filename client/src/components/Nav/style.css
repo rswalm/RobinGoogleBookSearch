@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #0c501d;
+}
+
+a {
+  color: #e9f0cb;
+  font-size: 14pt;
+}
+
+a:hover {
+  color: rgb(241, 180, 180)
+}

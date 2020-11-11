@@ -1,0 +1,15 @@
+.save {
+  background-color: #18836c;
+  color: #FFFFFF
+}
+
+.view {
+  background-color: #ac9b69;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #73160E;
+  margin-bottom: 330rem;
+}
