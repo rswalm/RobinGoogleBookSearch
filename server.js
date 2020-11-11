@@ -18,9 +18,23 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes)
 
 //Connet to mongoose
+<<<<<<< HEAD
 const dbConfig = "mongodb+srv://robin:Madonna80$@cluster0.1wiv2.mongodb.net/test";
 //const dbConfig = "mongodb+srv://robin:<p:Madonna80$assword>@cluster0.1wiv2.mongodb.net/GoogleBooks?retryWrites=true&w=majority";
 mongoose.connect(dbConfig|| "mongodb://localhost/googlebooks", {useNewUrlParser: true});
+=======
+//const dbConfig = "mongodb+srv://robin:Madonna80$@cluster0.1wiv2.mongodb.net/test";
+//mongoose.connect(dbConfig|| "mongodb://localhost/googlebooks", {useNewUrlParser: true});
+
+ const MongoClient = require('mongodb').MongoClient;
+ const uri = "mongodb+srv://robin:Madonna80$@cluster0.1wiv2.mongodb.net/GoogleBooks?retryWrites=true&w=majority";
+ const client = new MongoClient(uri, { useNewUrlParser: true });
+ client.connect(err => {
+   const collection = client.db("test").collection("devices");
+   // perform actions on the collection object
+   client.close();
+ });
+>>>>>>> 2427709b8a109833924daea305de1a7854bb678d
 
 // const MongoClient = require('mongodb').MongoClient;
 // const uri = "mongodb+srv://robin:Madonna80$@cluster0.1wiv2.mongodb.net/GoogleBooks?retryWrites=true&w=majority";
